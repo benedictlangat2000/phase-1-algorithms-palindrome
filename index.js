@@ -20,9 +20,11 @@ function isPalindrome(word) {
 
 /* 
   Add your pseudocode here
-1. Convert the input word to lowercase to make it case-insensitive.
- 2. Initialize two pointers, left and right, pointing to the start and end of the word, respectively.
-3. While the left pointer is less than the right pointer:
+  1. The isPalindrome function takes a string str as input.
+ 2.It initializes two pointers, left and right, which represent the starting and ending positions of the string.
+  3. Convert the input word to lowercase to make it case-insensitive.
+ 4. Initialize two pointers, left and right, pointing to the start and end of the word, respectively.
+5. While the left pointer is less than the right pointer:
    a. Compare the characters at the left and right pointers in lowercase.
    b. If the characters don't match, return false (it's not a palindrome).
    c. Increment the left pointer and decrement the right pointer to move towards the center of the word.
@@ -51,6 +53,11 @@ if (require.main === module) {
 
   console.log("Expecting: false");
   console.log("=>", isPalindrome("robot"));
+
+  console.log("Expecting: true");
+  console.log(isPalindrome("Racecar"));
+// Output: true (Case is ignored in checking for palindrome)
+
 }
 
 module.exports = isPalindrome;
